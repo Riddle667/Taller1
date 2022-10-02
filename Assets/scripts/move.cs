@@ -26,4 +26,8 @@ public class move : MonoBehaviour
             this.velocity *= -1;
         }
     }
+
+    public Vector2 returnVelocity(){
+        return velocity;
+    }
 }

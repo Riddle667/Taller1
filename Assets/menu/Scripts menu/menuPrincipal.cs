@@ -23,6 +23,6 @@ public class menuPrincipal : MonoBehaviour
 
     public void exitGame(){
         Application.Quit();
-        Debug.Log("his");
+        Debug.Log("Se salio");
     }
 }
