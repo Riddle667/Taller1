@@ -30,6 +30,8 @@ public class block : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        
+        if (other.gameObject.CompareTag("Floor")){
+            Time.timeScale = 0f;
+        }
     }
 }
