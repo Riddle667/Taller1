@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
     public List<AudioClip> AudioClips;
     public AudioSource audioSource;
-    public static SoundManager instance;
+    public static AudioManager instance;
 
     private void Awake() {
         if (instance == null){
@@ -35,5 +35,4 @@ public class SoundManager : MonoBehaviour
     public AudioClip successSound(){
         return this.AudioClips[8];
     }
-    
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class move : MonoBehaviour
+public class Crane : MonoBehaviour
 {
     Vector2 velocity = new Vector2 (2f,0f);
     public Rigidbody2D gruaRigidBody2d;
