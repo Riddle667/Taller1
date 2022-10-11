@@ -6,11 +6,20 @@ public class Crane : MonoBehaviour
 {
     Vector2 velocity = new Vector2 (2f,0f);
     public Rigidbody2D gruaRigidBody2d;
+    public static Crane instance;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        if(instance == null)
+        {
+            instance = this;
+        }
+    }
+
+    public void VelocityBoost()
+    {
+        velocity *= 1.5f;
     }
 
     // Update is called once per frame
@@ -22,7 +31,9 @@ public class Crane : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.CompareTag("Wall")){
+        if(other.gameObject.CompareTag("Wall"))
+        {
+            
             this.velocity *= -1;
         }
     }

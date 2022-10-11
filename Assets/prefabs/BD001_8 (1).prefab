@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2325235041576586103}
   - component: {fileID: 7384470770802532188}
   - component: {fileID: 2023404507205832299}
-  - component: {fileID: 6267643158531129323}
+  - component: {fileID: 6722700795007998398}
   m_Layer: 0
   m_Name: BD001_8 (1)
   m_TagString: Block
@@ -107,7 +107,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &2023404507205832299
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -134,7 +134,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
---- !u!114 &6267643158531129323
+--- !u!114 &6722700795007998398
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

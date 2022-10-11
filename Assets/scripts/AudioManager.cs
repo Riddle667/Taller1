@@ -7,6 +7,8 @@ public class AudioManager : MonoBehaviour
     public List<AudioClip> AudioClips;
     public AudioSource audioSource;
     public static AudioManager instance;
+    
+
 
     private void Awake() {
         if (instance == null){
@@ -17,7 +19,9 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlaySound(string soundName){
+    //para que se reproduzca la canción
+    public void PlaySound(string soundName)
+    {
         foreach (var clip in this.AudioClips)
         {
             if(clip.name == soundName){
@@ -29,10 +33,19 @@ public class AudioManager : MonoBehaviour
         Debug.Log("Audio no fue encontrado.");
     }
 
-    public AudioClip fallSound(){
-        return this.AudioClips[1];
-    }
-    public AudioClip successSound(){
-        return this.AudioClips[8];
+
+    //para la música de fondo
+    public void BackGroundMusic(string soundName)
+    {
+        foreach (var clip in this.AudioClips)
+        {
+            if(clip.name == soundName){
+                this.audioSource.clip = clip;
+                audioSource.Play();
+                audioSource.loop = true;
+                return;
+            }
+        }
+        Debug.Log("Audio no fue encontrado.");
     }
 }
